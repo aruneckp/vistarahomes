@@ -1,0 +1,151 @@
+/* ===========================================================
+   VISTARA HOMES — design tokens
+   Palette pulled from the property itself: mahogany wood facade,
+   maroon/gold bed linen, and the temple-town palette of Tirupati.
+   =========================================================== */
+:root {
+  --cream: #F7F2E9;
+  --cream-deep: #EEE5D3;
+  --ink: #241C16;
+  --mahogany: #2B1712;
+  --mahogany-soft: #3D211A;
+  --maroon: #7A1F2A;
+  --maroon-bright: #9A2A34;
+  --gold: #C89B3C;
+  --gold-soft: #E4C377;
+  --line: rgba(43, 23, 18, 0.14);
+
+  --font-display: "Cinzel", "Georgia", serif;
+  --font-body: "Manrope", "Segoe UI", sans-serif;
+
+  --container: 1180px;
+  --radius: 3px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root { overflow-x: hidden; }
+
+img { max-width: 100%; display: block; }
+
+a { color: inherit; text-decoration: none; }
+
+button { font-family: inherit; cursor: pointer; }
+
+::selection { background: var(--gold); color: var(--mahogany); }
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 12.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--maroon);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  margin: 0;
+  color: var(--mahogany);
+}
+
+h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  letter-spacing: 0.01em;
+}
+
+p { margin: 0; }
+
+.section {
+  padding: 100px 0;
+}
+
+.section-head {
+  max-width: 620px;
+  margin-bottom: 56px;
+}
+
+.section-head p {
+  margin-top: 16px;
+  font-size: 17px;
+  color: #5A4B40;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 15px 30px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  transition: transform 0.25s ease, background 0.25s ease, border-color .25s ease, color .25s ease;
+  white-space: nowrap;
+}
+
+.btn:hover { transform: translateY(-2px); }
+
+.btn-gold {
+  background: var(--gold);
+  color: var(--mahogany);
+}
+.btn-gold:hover { background: var(--gold-soft); }
+
+.btn-outline {
+  background: transparent;
+  border-color: rgba(247, 242, 233, 0.55);
+  color: var(--cream);
+}
+.btn-outline:hover { border-color: var(--gold); color: var(--gold-soft); }
+
+.btn-maroon {
+  background: var(--maroon);
+  color: var(--cream);
+}
+.btn-maroon:hover { background: var(--maroon-bright); }
+
+.spark {
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+@media (max-width: 860px) {
+  .section { padding: 72px 0; }
+  .section-head { margin-bottom: 38px; }
+}
