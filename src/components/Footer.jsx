@@ -1,5 +1,6 @@
 import { Phone, Mail, MapPin } from "lucide-react";
 import Spark from "./Spark";
+import { business } from "../data/business";
 
 export default function Footer() {
   return (
@@ -23,8 +24,8 @@ export default function Footer() {
 
         <div className="footer__col">
           <h4>Reach us</h4>
-          <a href="tel:+919876543210"><Phone size={15} /> +91 98765 43210</a>
-          <a href="mailto:stay@vistarahomestirupati.com"><Mail size={15} /> stay@vistarahomestirupati.com</a>
+          <a href={`tel:${business.phoneHref}`}><Phone size={15} /> {business.phoneDisplay}</a>
+          <a href={`mailto:${business.email}`}><Mail size={15} /> {business.email}</a>
           <span className="footer__address"><MapPin size={15} /> Tirupati, Andhra Pradesh</span>
         </div>
 
@@ -33,6 +34,7 @@ export default function Footer() {
           <a href="#rooms">Rooms &amp; Stay</a>
           <a href="#gallery">Gallery</a>
           <a href="#location">Location</a>
+          <a href="#faq">FAQ</a>
           <a href="#book">Book a stay</a>
         </div>
       </div>

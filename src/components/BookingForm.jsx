@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { MessageCircle, CheckCircle2 } from "lucide-react";
+import { MessageCircle, CheckCircle2, Star } from "lucide-react";
 import Spark from "./Spark";
-
-const WHATSAPP_NUMBER = "919876543210"; // TODO: replace with the real WhatsApp business number
+import { business } from "../data/business";
 
 const initialForm = {
   name: "",
@@ -40,7 +39,7 @@ export default function BookingForm() {
       form.message ? `Message: ${form.message}` : null,
     ].filter(Boolean);
 
-    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join("\n"))}`;
+    const url = `https://wa.me/${business.whatsappNumber}?text=${encodeURIComponent(lines.join("\n"))}`;
     window.open(url, "_blank", "noopener,noreferrer");
     setSent(true);
   };
@@ -58,8 +57,12 @@ export default function BookingForm() {
             Fill in your travel dates and we'll confirm the room over WhatsApp — usually within
             the hour. No advance payment needed to enquire.
           </p>
-          <a href="tel:+919876543210" className="booking__call">
-            Prefer to talk? Call +91 98765 43210
+          <p className="booking__rating">
+            <Star size={15} fill="var(--maroon)" color="var(--maroon)" />
+            <strong>{business.reviewRating}</strong> from {business.reviewCount} guests on {business.reviewSource}
+          </p>
+          <a href={`tel:${business.phoneHref}`} className="booking__call">
+            Prefer to talk? Call {business.phoneDisplay}
           </a>
         </div>
 

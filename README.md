@@ -22,17 +22,21 @@ or any static host.
 
 ## Before you launch — replace these placeholders
 
-Search the project for the following and update with real details:
+Contact details, hours, and policy all live in **one file** — `src/data/business.js` — so most
+of the list below is a single edit:
 
-| What | Where | File(s) |
-|---|---|---|
-| WhatsApp number (`919876543210`) | Floating button + booking form | `src/components/WhatsAppButton.jsx`, `src/components/BookingForm.jsx` |
-| Phone number (`+91 98765 43210`) | Navbar, hero, footer, location | `src/components/Navbar.jsx`, `Hero.jsx`, `Footer.jsx`, `BookingForm.jsx` |
-| Email address | Footer | `src/components/Footer.jsx` |
-| Exact street address | Location section | `src/components/Location.jsx` |
-| Map embed | Currently centered on "Tirupati" city — replace the `src` in the `<iframe>` with your exact pinned location from Google Maps (Share → Embed a map) | `src/components/Location.jsx` |
-| Room names, pricing copy, amenities | `src/data/content.js` |
-| Guest testimonials | Currently sample quotes — swap in real guest feedback | `src/data/content.js` |
+| What | Where |
+|---|---|
+| Phone, WhatsApp number, email, address, map embed src, check-in/out times, review rating | `src/data/business.js` |
+| Room pricing (`priceFrom` on each room) | `src/data/content.js` |
+| House rules / cancellation policy | `houseRules` in `src/data/content.js` |
+| FAQ answers | `faqs` in `src/data/content.js` — keep the matching `FAQPage` JSON-LD in `index.html` in sync |
+| Guest testimonials | Currently sample quotes — swap in real guest feedback, `src/data/content.js` |
+| Exact geo coordinates for SEO | `geo` in `src/data/business.js` and the `LodgingBusiness` JSON-LD in `index.html` |
+| Social share image (`og-image.jpg`) | Currently a property exterior photo — swap the file in `public/` if you want a different one |
+| Canonical/`og:url` domain | Currently a placeholder domain — replace throughout `index.html` once deployed |
+
+Search the project for `TODO` comments to find every placeholder in context.
 
 ## Notes on the booking form
 
@@ -45,8 +49,10 @@ like Formspree, or point it at your own API.
 
 ```
 src/
-  components/    — one component per section (Navbar, Hero, Rooms, Gallery, etc.)
-  data/          — content.js holds room/gallery/testimonial data and image imports
+  components/    — one component per section (Navbar, Hero, Rooms, Gallery, FAQ, Policies, etc.)
+  data/
+    business.js  — single source of truth for contact info, hours, and policy
+    content.js   — room/gallery/testimonial/FAQ data and image imports
   assets/images/ — the property photos
   index.css      — design tokens (colors, fonts, spacing)
   styles.css     — component styles

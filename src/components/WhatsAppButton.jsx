@@ -1,9 +1,8 @@
 import { MessageCircle } from "lucide-react";
-
-const WHATSAPP_NUMBER = "919876543210"; // TODO: replace with the real WhatsApp business number
+import { business } from "../data/business";
 
 export default function WhatsAppButton() {
-  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+  const url = `https://wa.me/${business.whatsappNumber}?text=${encodeURIComponent(
     "Hi Vistara Homes, I'd like to know more about staying with you in Tirupati."
   )}`;
 

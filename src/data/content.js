@@ -26,11 +26,13 @@ export const images = {
   lobby,
 };
 
+// TODO: replace every `priceFrom` below with your real per-night rate.
 export const rooms = [
   {
     id: "family-suite",
     name: "Family Suite",
     tag: "Most booked for Tirumala darshan groups",
+    priceFrom: "₹3,500",
     image: livingDining,
     description:
       "A full apartment with a separate living and dining area, built for families travelling together for darshan. Comes with a working kitchenette so the first and last meal of the trip can be home-cooked.",
@@ -40,6 +42,7 @@ export const rooms = [
     id: "comfort-room",
     name: "Comfort Room",
     tag: "Ideal for couples & small families",
+    priceFrom: "₹1,800",
     image: bedroomMaroon,
     description:
       "A quieter double room with a plush bed, wardrobe space, and an en-suite bath — turned down daily with fresh linen so you can rest well before the climb to Tirumala.",
@@ -49,10 +52,69 @@ export const rooms = [
     id: "deluxe-room",
     name: "Deluxe Room",
     tag: "Extra space, warmly furnished",
+    priceFrom: "₹2,500",
     image: bedroomGold2,
     description:
       "Our largest room category, with a full-height wardrobe wall and a window seat that catches the morning light — a favourite with returning pilgrim families.",
     amenities: ["King bed", "Window seating nook", "Full wardrobe wall", "Premium linen"],
+  },
+];
+
+export const landmarks = [
+  { label: "Tirupati Railway Station", distance: "approx. 10 minutes by auto" },
+  { label: "Tirumala bus point (RTC bus stand)", distance: "approx. 5 minutes away" },
+  { label: "Alipiri footpath start", distance: "approx. 10 minutes by auto" },
+  { label: "Srinivasam Complex", distance: "approx. 8 minutes by auto" },
+  { label: "Renigunta Airport", distance: "approx. 25 minutes by road" },
+];
+
+export const pilgrimTips = [
+  "Darshan slots on the TTD portal (ttdevasthanams.ap.gov.in) open roughly 90 days in advance — book ahead if you can, and carry a photo ID for everyone in your group.",
+  "Free luggage cloakrooms are available at the Srinivasam Complex and at Alipiri if you're doing the footpath climb — you don't need to carry bags up the hill.",
+  "Arriving on an overnight bus or train? Our caretaker is up around the clock, so a 3 AM check-in is completely normal here.",
+];
+
+export const houseRules = [
+  { label: "Check-in", value: "12:00 PM — early check-in on request, no extra charge, just tell us your ETA" },
+  { label: "Check-out", value: "11:00 AM" },
+  { label: "ID proof", value: "Valid government photo ID required for all adult guests at check-in" },
+  { label: "Food policy", value: "Pure vegetarian kitchen in every apartment; no non-veg food on the premises" },
+  { label: "Cancellation", value: "Free cancellation up to 48 hours before check-in; details confirmed when you book" },
+  { label: "Payment", value: "Cash, UPI, and major cards accepted on arrival — no advance payment needed to enquire" },
+];
+
+export const faqs = [
+  {
+    q: "How far is Vistara Homes from the Tirumala bus point and railway station?",
+    a: "About 5 minutes to the Tirumala bus point and 10 minutes to Tirupati Railway Station by auto — close enough that you're never far from your next darshan slot.",
+  },
+  {
+    q: "Can we check in late at night or very early in the morning?",
+    a: "Yes. Pilgrims arrive at all hours on overnight buses and trains, so our caretaker keeps hours around your travel plans, not office hours. Just share your expected arrival time when you enquire.",
+  },
+  {
+    q: "Is there a kitchen we can use?",
+    a: "Every apartment has its own working, pure-vegetarian kitchen — most families use it for at least their first and last meal of the trip.",
+  },
+  {
+    q: "Do you help with darshan ticket booking?",
+    a: "We don't book tickets on your behalf, but we're happy to guide you on the TTD portal and QR-based token process, and to point you to the nearest counters if you need offline tokens.",
+  },
+  {
+    q: "Where can we leave our luggage if we're doing the Alipiri footpath climb?",
+    a: "There are free TTD luggage cloakrooms at both Srinivasam Complex and Alipiri, a short auto ride from the property, so you don't have to carry bags up the hill.",
+  },
+  {
+    q: "What's the cancellation policy?",
+    a: "Free cancellation up to 48 hours before your check-in date. We'll confirm the exact terms over WhatsApp when your booking is confirmed.",
+  },
+  {
+    q: "Is parking available for self-drive or taxi pickups?",
+    a: "Yes, covered parking is available on-site for self-drive guests, and there's easy pickup/drop access for taxis and autos.",
+  },
+  {
+    q: "Can multiple rooms be booked for an extended family or group?",
+    a: "Yes — larger groups usually split across two or more apartments on the same floor, so everyone stays close together.",
   },
 ];
 

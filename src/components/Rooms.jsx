@@ -25,7 +25,13 @@ export default function Rooms() {
               </div>
               <div className="room-card__body">
                 <p className="room-card__tag">{room.tag}</p>
-                <h3>{room.name}</h3>
+                <div className="room-card__heading">
+                  <h3>{room.name}</h3>
+                  <p className="room-card__price">
+                    {room.priceFrom}
+                    <span>/ night</span>
+                  </p>
+                </div>
                 <p className="room-card__desc">{room.description}</p>
                 <ul className="room-card__amenities">
                   {room.amenities.map((a) => (

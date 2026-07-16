@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import Spark from "./Spark";
+import { business } from "../data/business";
 
 const LINKS = [
   { href: "#rooms", label: "Rooms" },
   { href: "#gallery", label: "Gallery" },
   { href: "#experience", label: "Experience" },
   { href: "#location", label: "Location" },
+  { href: "#faq", label: "FAQ" },
   { href: "#book", label: "Book" },
 ];
 
@@ -39,9 +41,9 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <a href="tel:+919876543210" className="navbar__call">
+        <a href={`tel:${business.phoneHref}`} className="navbar__call">
           <Phone size={15} />
-          <span>+91 98765 43210</span>
+          <span>{business.phoneDisplay}</span>
         </a>
 
         <button
@@ -60,8 +62,8 @@ export default function Navbar() {
               {l.label}
             </a>
           ))}
-          <a href="tel:+919876543210" className="navbar__call navbar__call--mobile">
-            <Phone size={15} /> <span>+91 98765 43210</span>
+          <a href={`tel:${business.phoneHref}`} className="navbar__call navbar__call--mobile">
+            <Phone size={15} /> <span>{business.phoneDisplay}</span>
           </a>
         </nav>
       )}

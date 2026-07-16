@@ -1,5 +1,7 @@
-import { MapPin, Train, Bus, Car } from "lucide-react";
+import { MapPin, Info } from "lucide-react";
 import Spark from "./Spark";
+import { business } from "../data/business";
+import { landmarks, pilgrimTips } from "../data/content";
 
 export default function Location() {
   return (
@@ -18,29 +20,32 @@ export default function Location() {
 
           <div className="location__address">
             <MapPin size={18} color="var(--maroon)" />
-            <span>Vistara Homes, Tirupati, Andhra Pradesh &mdash; exact address shared on booking confirmation</span>
+            <span>{business.addressLine}</span>
           </div>
 
           <ul className="location__routes">
-            <li>
-              <Train size={17} />
-              <span><strong>Tirupati Railway Station</strong> — approx. 10 minutes by auto</span>
-            </li>
-            <li>
-              <Bus size={17} />
-              <span><strong>Tirumala bus point</strong> — approx. 5 minutes away</span>
-            </li>
-            <li>
-              <Car size={17} />
-              <span><strong>Renigunta Airport</strong> — approx. 25 minutes by road</span>
-            </li>
+            {landmarks.map((l) => (
+              <li key={l.label}>
+                <Spark size={11} color="var(--maroon)" />
+                <span><strong>{l.label}</strong> — {l.distance}</span>
+              </li>
+            ))}
           </ul>
+
+          <div className="location__tips">
+            <h4><Info size={16} color="var(--gold)" /> Good to know before you travel</h4>
+            <ul>
+              {pilgrimTips.map((tip) => (
+                <li key={tip}>{tip}</li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         <div className="location__map">
           <iframe
             title="Vistara Homes location in Tirupati"
-            src="https://maps.google.com/maps?q=Tirupati,+Andhra+Pradesh&output=embed"
+            src={business.mapEmbedSrc}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />

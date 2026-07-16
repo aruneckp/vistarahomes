@@ -1,4 +1,6 @@
+import { Star } from "lucide-react";
 import { images } from "../data/content";
+import { business } from "../data/business";
 import Spark from "./Spark";
 
 export default function Hero() {
@@ -27,11 +29,15 @@ export default function Hero() {
           A home stay built around the pilgrim's journey — spacious rooms, a kitchen of your own,
           and someone awake to welcome you, whatever time your bus gets in.
         </p>
+        <p className="hero__rating">
+          <Star size={15} fill="var(--gold)" color="var(--gold)" />
+          <strong>{business.reviewRating}</strong> ({business.reviewCount} stays) on {business.reviewSource}
+        </p>
         <div className="hero__actions">
           <a href="#book" className="btn btn-gold">
             Check availability
           </a>
-          <a href="tel:+919876543210" className="btn btn-outline">
+          <a href={`tel:${business.phoneHref}`} className="btn btn-outline">
             Call the caretaker
           </a>
         </div>
