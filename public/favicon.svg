@@ -1,4 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="10" fill="#2B1712"/>
-  <path d="M32 10 L36 28 L54 32 L36 36 L32 54 L28 36 L10 32 L28 28 Z" fill="#C89B3C"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <rect width="24" height="24" rx="4" fill="#2B1712"/>
+  <circle cx="12" cy="4.4" r="1.1" fill="#C89B3C"/>
+  <polygon points="10.4,10.6 13.6,10.6 12,5.6" fill="#C89B3C"/>
+  <polygon points="8.6,13.8 15.4,13.8 13.6,10.6 10.4,10.6" fill="#C89B3C"/>
+  <polygon points="6.6,17.2 17.4,17.2 15.4,13.8 8.6,13.8" fill="#C89B3C"/>
+  <polygon points="4.6,20.6 19.4,20.6 17.4,17.2 6.6,17.2" fill="#C89B3C"/>
+  <rect x="3.4" y="20.6" width="17.2" height="1.4" rx="0.4" fill="#C89B3C"/>
 </svg>

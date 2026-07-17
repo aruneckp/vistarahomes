@@ -20,7 +20,7 @@ export default function Welcome() {
             you're never far from your next darshan slot.
           </p>
           <p>
-            Every apartment is run like a home rather than a hotel room: real kitchens, proper
+            Every apartment is run like a home rather than a hotel: real kitchens, proper
             wardrobes, and a caretaker who keeps hours around your travel plans, not office hours.
             Families, elders, and groups travelling together are who we built this for.
           </p>
@@ -35,7 +35,22 @@ export default function Welcome() {
             </div>
             <div>
               <strong>3</strong>
-              <span>room types to choose from</span>
+              <span>stay types to choose from</span>
+            </div>
+          </div>
+
+          <div className="welcome__ethos">
+            <Spark size={18} color="var(--gold)" />
+            <div>
+              <p className="welcome__ethos-line">
+                <span className="welcome__ethos-sanskrit">अतिथि देवो भव</span>
+                <span className="welcome__ethos-translit">— Athithi Devo Bhava, "the guest is akin to god"</span>
+              </p>
+              <p className="welcome__ethos-body">
+                It's an old idea, and in a pilgrim town like Tirupati it's still a living one. We try
+                to carry it into how we run Vistara Homes — a warm welcome whatever the hour, not
+                just a stay for the night.
+              </p>
             </div>
           </div>
         </div>

@@ -3,14 +3,14 @@ import Spark from "./Spark";
 
 export default function Rooms() {
   return (
-    <section id="rooms" className="section rooms">
+    <section id="stays" className="section rooms">
       <div className="container">
         <div className="section-head">
           <p className="eyebrow">
             <Spark size={12} color="var(--maroon)" />
-            Rooms &amp; Stay
+            Suites &amp; Stays
           </p>
-          <h2>Choose the room that fits your group</h2>
+          <h2>Choose the stay that fits your group</h2>
           <p>
             Every category comes fully furnished and serviced. Larger groups usually split
             across two apartments on the same floor.
@@ -42,7 +42,7 @@ export default function Rooms() {
                   ))}
                 </ul>
                 <a href="#book" className="room-card__cta">
-                  Enquire for this room &rarr;
+                  Enquire for this stay &rarr;
                 </a>
               </div>
             </article>

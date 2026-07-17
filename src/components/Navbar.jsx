@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
-import Spark from "./Spark";
+import Logo from "./Logo";
 import { business } from "../data/business";
 
 const LINKS = [
-  { href: "#rooms", label: "Rooms" },
+  { href: "#stays", label: "Stays" },
   { href: "#gallery", label: "Gallery" },
   { href: "#experience", label: "Experience" },
   { href: "#location", label: "Location" },
@@ -12,7 +12,7 @@ const LINKS = [
   { href: "#book", label: "Book" },
 ];
 
-export default function Navbar() {
+export default function Navbar({ withBanner = false }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -24,10 +24,12 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className={`navbar ${scrolled || open ? "navbar--solid" : ""}`}>
+    <header
+      className={`navbar ${scrolled || open ? "navbar--solid" : ""} ${withBanner ? "navbar--with-banner" : ""}`}
+    >
       <div className="container navbar__row">
         <a href="#top" className="navbar__brand" onClick={() => setOpen(false)}>
-          <Spark size={16} color="var(--gold)" />
+          <Logo size={22} color="var(--gold)" />
           <span>
             Vistara <em>Homes</em>
           </span>

@@ -37,7 +37,7 @@ export default function Gallery() {
             <Spark size={12} color="var(--maroon)" />
             Gallery
           </p>
-          <h2>The property, room by room</h2>
+          <h2>The property, space by space</h2>
           <p>A closer look before you book — tap any photo to see it full size.</p>
         </div>
 

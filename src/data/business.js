@@ -4,9 +4,9 @@
 export const business = {
   name: "Vistara Homes",
 
-  phoneDisplay: "+91 98765 43210",
-  phoneHref: "+919876543210",
-  whatsappNumber: "919876543210",
+  phoneDisplay: "+91 70361 16111",
+  phoneHref: "+917036116111",
+  whatsappNumber: "917036116111",
   email: "stay@vistarahomestirupati.com",
 
   addressLine: "Tirupati, Andhra Pradesh — exact address shared on booking confirmation",
@@ -18,7 +18,7 @@ export const business = {
 
   checkIn: "12:00 PM",
   checkOut: "11:00 AM",
-  earlyCheckInNote: "Arriving on an overnight bus or train? Tell us your ETA and we'll have a room ready — no extra charge for early check-in on request.",
+  earlyCheckInNote: "Arriving on an overnight bus or train? Tell us your ETA and we'll have your stay ready — no extra charge for early check-in on request.",
 
   reviewRating: "4.8",
   reviewCount: "120+",

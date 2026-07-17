@@ -1,3 +1,5 @@
+import { useState } from "react";
+import AnnouncementBar from "./components/AnnouncementBar";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Welcome from "./components/Welcome";
@@ -9,13 +11,16 @@ import Policies from "./components/Policies";
 import FAQ from "./components/FAQ";
 import BookingForm from "./components/BookingForm";
 import Footer from "./components/Footer";
-import WhatsAppButton from "./components/WhatsAppButton";
+import ChatWidget from "./components/ChatWidget";
 import StickyMobileBar from "./components/StickyMobileBar";
 
 export default function App() {
+  const [announcementOpen, setAnnouncementOpen] = useState(true);
+
   return (
     <>
-      <Navbar />
+      {announcementOpen && <AnnouncementBar onClose={() => setAnnouncementOpen(false)} />}
+      <Navbar withBanner={announcementOpen} />
       <main>
         <Hero />
         <Welcome />
@@ -28,7 +33,7 @@ export default function App() {
         <BookingForm />
       </main>
       <Footer />
-      <WhatsAppButton />
+      <ChatWidget />
       <StickyMobileBar />
     </>
   );

@@ -26,6 +26,15 @@ export const images = {
   lobby,
 };
 
+// Hero slideshow — rotates through these in order.
+// TODO: once Tirupati/Tirumala photos (temple, gopuram, hills) are provided,
+// import them above and add entries here to mix them into the rotation.
+export const heroSlides = [
+  { src: exteriorNight, alt: "Vistara Homes building lit up at night, in Tirupati" },
+  { src: exteriorDay, alt: "Vistara Homes seen from the park across the street, daytime" },
+  { src: exteriorDusk, alt: "Vistara Homes at dusk, view from the park across the road" },
+];
+
 // TODO: replace every `priceFrom` below with your real per-night rate.
 export const rooms = [
   {
@@ -39,23 +48,23 @@ export const rooms = [
     amenities: ["Sleeps up to 6", "Private kitchenette", "Dining table for 4", "Smart TV & Wi-Fi"],
   },
   {
-    id: "comfort-room",
-    name: "Comfort Room",
+    id: "comfort-suite",
+    name: "Comfort Suite",
     tag: "Ideal for couples & small families",
     priceFrom: "₹1,800",
     image: bedroomMaroon,
     description:
-      "A quieter double room with a plush bed, wardrobe space, and an en-suite bath — turned down daily with fresh linen so you can rest well before the climb to Tirumala.",
+      "A quieter double stay with a plush bed, wardrobe space, and an en-suite bath — turned down daily with fresh linen so you can rest well before the climb to Tirumala.",
     amenities: ["Double bed", "En-suite bathroom", "Daily housekeeping", "Reading lamp & wardrobe"],
   },
   {
-    id: "deluxe-room",
-    name: "Deluxe Room",
+    id: "deluxe-suite",
+    name: "Deluxe Suite",
     tag: "Extra space, warmly furnished",
     priceFrom: "₹2,500",
     image: bedroomGold2,
     description:
-      "Our largest room category, with a full-height wardrobe wall and a window seat that catches the morning light — a favourite with returning pilgrim families.",
+      "Our largest stay category, with a full-height wardrobe wall and a window seat that catches the morning light — a favourite with returning pilgrim families.",
     amenities: ["King bed", "Window seating nook", "Full wardrobe wall", "Premium linen"],
   },
 ];
@@ -113,7 +122,7 @@ export const faqs = [
     a: "Yes, covered parking is available on-site for self-drive guests, and there's easy pickup/drop access for taxis and autos.",
   },
   {
-    q: "Can multiple rooms be booked for an extended family or group?",
+    q: "Can we book more than one apartment for an extended family or group?",
     a: "Yes — larger groups usually split across two or more apartments on the same floor, so everyone stays close together.",
   },
 ];
@@ -132,12 +141,12 @@ export const gallery = [
   { src: exteriorDay, caption: "The building, by day" },
   { src: livingDining, caption: "Living & dining area" },
   { src: livingCoral, caption: "Family Suite living room" },
-  { src: bedroomGold1, caption: "Deluxe Room" },
+  { src: bedroomGold1, caption: "Deluxe Suite" },
   { src: kitchen, caption: "In-apartment kitchen" },
-  { src: livingBlue, caption: "Comfort Room lounge" },
-  { src: bedroomMaroon, caption: "Comfort Room bedroom" },
+  { src: livingBlue, caption: "Comfort Suite lounge" },
+  { src: bedroomMaroon, caption: "Comfort Suite bedroom" },
   { src: livingPink, caption: "Second living room" },
-  { src: bedroomGold2, caption: "Deluxe Room wardrobe wall" },
+  { src: bedroomGold2, caption: "Deluxe Suite wardrobe wall" },
   { src: lobby, caption: "Ground floor common area" },
   { src: exteriorDusk, caption: "Evening, from the park across the road" },
 ];

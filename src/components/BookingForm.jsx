@@ -35,7 +35,7 @@ export default function BookingForm() {
       `Check-in: ${form.checkIn}`,
       `Check-out: ${form.checkOut}`,
       `Guests: ${form.guests}`,
-      `Room preference: ${form.room}`,
+      `Stay preference: ${form.room}`,
       form.message ? `Message: ${form.message}` : null,
     ].filter(Boolean);
 
@@ -54,7 +54,7 @@ export default function BookingForm() {
           </p>
           <h2>Check availability for your dates</h2>
           <p className="booking__lead">
-            Fill in your travel dates and we'll confirm the room over WhatsApp — usually within
+            Fill in your travel dates and we'll confirm your stay over WhatsApp — usually within
             the hour. No advance payment needed to enquire.
           </p>
           <p className="booking__rating">
@@ -73,7 +73,7 @@ export default function BookingForm() {
               <h3>Enquiry sent to WhatsApp</h3>
               <p>
                 We've opened WhatsApp with your details filled in — send the message and our
-                caretaker will confirm your room shortly.
+                caretaker will confirm your stay shortly.
               </p>
               <button type="button" className="btn btn-outline-dark" onClick={() => { setSent(false); setForm(initialForm); }}>
                 Send another enquiry
@@ -113,11 +113,11 @@ export default function BookingForm() {
                   </select>
                 </label>
                 <label>
-                  Room preference
+                  Stay preference
                   <select value={form.room} onChange={update("room")}>
                     <option>Family Suite</option>
-                    <option>Comfort Room</option>
-                    <option>Deluxe Room</option>
+                    <option>Comfort Suite</option>
+                    <option>Deluxe Suite</option>
                     <option>Not sure yet</option>
                   </select>
                 </label>

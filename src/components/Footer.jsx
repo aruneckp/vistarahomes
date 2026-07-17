@@ -1,5 +1,5 @@
 import { Phone, Mail, MapPin } from "lucide-react";
-import Spark from "./Spark";
+import Logo from "./Logo";
 import { business } from "../data/business";
 
 export default function Footer() {
@@ -7,14 +7,14 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer__sparks" aria-hidden="true">
         {Array.from({ length: 10 }).map((_, i) => (
-          <Spark key={i} size={12} color="var(--gold)" />
+          <Logo key={i} size={14} color="var(--gold)" />
         ))}
       </div>
 
       <div className="container footer__grid">
         <div className="footer__brand">
           <a href="#top" className="navbar__brand">
-            <Spark size={16} color="var(--gold)" />
+            <Logo size={20} color="var(--gold)" />
             <span>
               Vistara <em>Homes</em>
             </span>
@@ -31,7 +31,7 @@ export default function Footer() {
 
         <div className="footer__col">
           <h4>Explore</h4>
-          <a href="#rooms">Rooms &amp; Stay</a>
+          <a href="#stays">Our Stays</a>
           <a href="#gallery">Gallery</a>
           <a href="#location">Location</a>
           <a href="#faq">FAQ</a>
